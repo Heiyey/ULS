@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f242d;
+  color: #ffffff; /* Cambiar el color del texto a blanco para mayor contraste */
+}
+
+.contact h2 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact form {
+  width: 600px;
+  text-align: center;
+}
+
+form .input-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box .input-field {
+  width: 48.5%;
+}
+
+.field .item {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid #0ef;
+  outline: none;
+  border-radius: 6px;
+  transition: 0.5s ease-in-out;
+  font-size: 16px;
+  margin: 12px;
+  color: #ffffff; /* Cambiar el color del texto dentro de los campos */
+}
+
+.field .item::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Aumentar la opacidad del placeholder para mayor visibilidad */
+}
+
+.field .item:hover {
+  border-color: rgb(255, 255, 255);
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+
+form button {
+  padding: 12px 32px;
+  background: #0ef;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+  font-weight: 550;
+}
+
+form button:hover {
+  box-shadow: 0 0 20px #0cf;
+  transform: scale(1.1);
+}
+
+.field .error-txt {
+  color: #ff0000;
+  text-align: left;
+  font-size: 16px;
+  margin: -5px 0 10px;
+  display: none; /*Initially hidden */
+}
+
+form .textarea-field .error-txt {
+  margin-top: -10;
+}
+
+/* Estilos web responsive */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  form .input-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .input-box .input-field {
+    width: 100%;
+  }
+
+  .field .item {
+    margin: 8px 0;
+  }
+
+  .contact h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
