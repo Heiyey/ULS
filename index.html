@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ULS Service Request</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="contact">
+      <h2>Create a Service Request</h2>
+
+      <form id="serviceForm">
+        <!-- Campo oculto para el correo receptor -->
+        <input type="hidden" name="_subject" value="New Service Request" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <div class="input-box">
+          <div class="input-field field">
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              id="name"
+              class="item"
+              autocomplete="off"
+            />
+            <div class="error-txt">Full Name can't be blank</div>
+          </div>
+          <div class="input-field field">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id="email"
+              class="item"
+              autocomplete="off"
+            />
+            <div class="error-txt">Email Address can't be blank</div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="input-field field">
+            <input
+              type="text"
+              name="serial"
+              placeholder="Serial Number"
+              id="serial"
+              class="item"
+              autocomplete="off"
+            />
+            <div class="error-txt">Serial Number can't be blank</div>
+          </div>
+          <div class="input-field field">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              id="subject"
+              class="item"
+              autocomplete="off"
+            />
+            <div class="error-txt">Subject can't be blank</div>
+          </div>
+        </div>
+
+        <div class="textarea-field field">
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            class="item"
+            autocomplete="off"
+          ></textarea>
+          <div class="error-txt">Message can't be blank</div>
+        </div>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
