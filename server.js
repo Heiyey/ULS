@@ -1,10 +1,12 @@
+require("dotenv").config();
+
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Variable para el destinatario
 const recipientEmail = "heiyeywolf25@gmail.com, andreviss170@gmail.com"; // Cambia esta dirección según sea necesario
@@ -33,8 +35,8 @@ app.post("/send-email", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "candrevis1706@gmail.com", // Tu correo
-        pass: "linw rszd pimm ogma", // Contraseña de aplicación
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
